@@ -1,0 +1,344 @@
+/*-- scss:defaults --*/
+
+// ── PALETA ────────────────────────────────────────────────────
+
+$ink:        #1a1612;
+$paper:      #f5f0e8;
+$rust:       #8b3a2a;
+$rust-pale:  #c96a4f;
+$gold:       #b8972a;
+$muted:      #6b6258;
+$border:     #c8bfb0;
+$code-bg:    #ede8de;
+
+/* ── TIPOGRAFÍA ──────────────────────────────────────────── */
+
+/*
+ * Importar en _quarto.yml via html > include-in-header,
+ * o añadir aquí si el renderer lo soporta:
+ *
+ * @import url('https://fonts.googleapis.com/css2?
+ *   family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700
+ *   &family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300
+ *   &family=JetBrains+Mono:wght@400;500
+ *   &display=swap');
+ */
+
+$font-family-serif: 'Source Serif 4', Georgia, serif;
+$font-family-mono:  'JetBrains Mono', 'Courier New', monospace;
+
+/* ── OVERRIDES COSMO ─────────────────────────────────────── */
+
+$body-bg:    $paper;
+$body-color: $ink;
+$link-color: $rust;
+
+/*-- scss:rules --*/
+
+// ── BLOQUES DIFERENCIADOS ─────────────────────────────────────
+
+/* 1. Apertura irónica */
+.block-irony {
+  font-style: italic;
+  border-left: 3px solid $rust;
+  padding: 0.6rem 1.2rem;
+  margin: 1.8rem 0 1.4rem;
+  color: #0e0b09;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* 2. Descripción analítica */
+.block-description {
+  background: rgba(245, 240, 232, 0.7);
+  border: 1px solid $border;
+  padding: 0.9rem 1.2rem;
+  margin: 1.2rem 0;
+  line-height: 1.8;
+}
+
+/* 3. Caso / anécdota */
+.block-case {
+  border-left: 3px solid $gold;
+  padding: 0.6rem 1.2rem;
+  margin: 1.5rem 0;
+  font-size: 0.96rem;
+  line-height: 1.75;
+
+  strong:first-child {
+    display: block;
+    font-family: $font-family-mono;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: $gold;
+    margin-bottom: 0.4rem;
+  }
+}
+
+/* 4. Autocorrección del narrador */
+.block-selfcorrection {
+  font-style: italic;
+  font-size: 0.93rem;
+  color: $muted;
+  margin: 1.4rem 2.5rem;
+  padding: 0.6rem 1rem;
+  border-top: 1px dashed $border;
+  border-bottom: 1px dashed $border;
+  line-height: 1.7;
+}
+
+/* 5. Contextualización teórica */
+.block-theory {
+  background: #f0ebe0;
+  padding: 0.9rem 1.2rem;
+  margin: 1.2rem 0;
+  border-left: 2px solid $border;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+/* 6. Sátira + ilustración */
+.block-satire {
+  margin: 2.2rem 0;
+
+  figure {
+    margin: 0;
+  }
+
+  figcaption,
+  .figure-caption {
+    font-style: italic;
+    font-size: 0.82rem;
+    color: $muted;
+    text-align: left;
+    margin-top: 0.5rem;
+    line-height: 1.55;
+    /* Etiqueta de museo británico: concisa, seca, mortal */
+  }
+}
+
+/* ── Cover (collapsible courtesy) ─────────────────────── */
+.cover-courtesy {
+  margin: 1.5rem auto 2.5rem;
+  max-width: 28rem;
+  text-align: left;
+}
+.cover-courtesy summary {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--muted);
+  cursor: pointer;
+  list-style: none;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+}
+.cover-courtesy summary::before {
+  content: "▸";
+  display: inline-block;
+  font-size: 0.75em;
+  transition: transform 0.25s ease;
+}
+.cover-courtesy[open] summary::before {
+  transform: rotate(90deg);
+}
+.cover-courtesy summary:hover {
+  color: var(--rust);
+}
+.cover-courtesy summary::-webkit-details-marker {
+  display: none;
+}
+.cover-courtesy[open] summary {
+  margin-bottom: 1rem;
+}
+.cover-courtesy .cover-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--border);
+}
+
+/* ── GLOSARIO ────────────────────────────────────────────── */
+
+.gloss-alert {
+  background: #fff8f0;
+  border-left: 3px solid $rust-pale;
+  padding: 0.8rem 1.2rem;
+  margin: 0.8rem 0 1.6rem;
+  font-size: 0.92rem;
+  line-height: 1.75;
+
+  strong:first-child {
+    display: block;
+    font-family: $font-family-mono;
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: $rust-pale;
+    margin-bottom: 0.4rem;
+  }
+}
+
+/* ── NOTA DE BORRADOR ────────────────────────────────────── */
+/* Texto visible sólo en fases de desarrollo.               */
+/* Eliminar o comentar antes del render final.              */
+
+.draft-note {
+  display: block;
+  background: lighten($gold, 45%);
+  border: 1px dashed $gold;
+  color: darken($gold, 20%);
+  font-family: $font-family-mono;
+  font-size: 0.78rem;
+  padding: 0.5rem 1rem;
+  margin: 1rem 0;
+  font-style: normal;
+}
+
+/* ── CABECERA DEL LIBRO ──────────────────────────────────── */
+
+.quarto-title-block {
+  border-bottom: 2px solid $rust;
+  padding-bottom: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.quarto-title {
+  font-family: 'Playfair Display', $font-family-serif;
+  color: $ink;
+}
+
+.quarto-title-subtitle {
+  color: $muted;
+  font-style: italic;
+}
+
+/* ── TOC ─────────────────────────────────────────────────── */
+
+#TOC {
+  border-left: 2px solid $border;
+  font-size: 0.88rem;
+
+  a {
+    color: $muted;
+    text-decoration: none;
+
+    &:hover {
+      color: $rust;
+    }
+  }
+}
+
+/* ── CÓDIGO / DATOS ──────────────────────────────────────── */
+
+pre.sourceCode,
+div.sourceCode {
+  background: $code-bg;
+  border: 1px solid $border;
+  font-size: 0.82rem;
+}
+
+/* ── FIGURAS Y TABLAS ────────────────────────────────────── */
+
+figure {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.quarto-float-caption {
+  font-style: italic;
+  font-size: 0.84rem;
+  color: $muted;
+  text-align: left;
+  margin-top: 0.4rem;
+}
+
+table {
+  font-size: 0.9rem;
+  border-top: 2px solid $border;
+  border-bottom: 2px solid $border;
+
+  th {
+    font-family: $font-family-mono;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $muted;
+    border-bottom: 1px solid $border;
+  }
+
+  td {
+    border-bottom: 1px solid lighten($border, 5%);
+    vertical-align: top;
+  }
+}
+
+/* ── NOTAS AL PIE / CITAS ────────────────────────────────── */
+
+.footnotes {
+  font-size: 0.85rem;
+  color: $muted;
+  border-top: 1px solid $border;
+  margin-top: 3rem;
+  padding-top: 1rem;
+}
+
+/* ── RESPONSIVE ──────────────────────────────────────────── */
+
+@media (max-width: 640px) {
+  .block-selfcorrection {
+    margin: 1.2rem 0.8rem;
+  }
+  .block-irony {
+    font-size: 0.98rem;
+  }
+}
+
+.plate {
+  margin: 2.5rem auto;
+  max-width: 48rem;        // ← cambio aquí
+  padding: 1rem 0;
+  border-top: 1px solid var(--border, #c8bfb0);
+  border-bottom: 1px solid var(--border, #c8bfb0);
+  img {
+    display: block;
+    width: 100%;
+    height: auto;          // ← sin el f.plate espurio
+    margin-bottom: 0.8rem;
+  }
+
+  p {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-style: italic;
+    font-size: 0.86rem;
+    line-height: 1.55;
+    color: var(--muted, #6b6258);
+    text-align: left;
+    margin: 0;
+    padding: 0 0.4rem;
+  }
+}
+
+// ── Data anchor blocks ──────────────────────────────────────
+// Pasajes empíricos que remiten a tablas o apéndice.
+// Tipografía ligeramente menor; borde izquierdo en dorado apagado.
+
+.block-data {
+  border-left: 3px solid #b8972a;
+  padding: 0.5rem 1.3rem;
+  margin: 1.6rem 0;
+  background-color: #f0ebe0;
+  font-size: 0.92em;
+  color: #3a3530;
+
+  p {
+    margin-bottom: 0.45rem;
+    &:last-child { margin-bottom: 0; }
+  }
+}
