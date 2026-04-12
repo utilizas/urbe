@@ -106,7 +106,7 @@ that point.
 A working citation in author-date form, prior to the DOI:
 
 > Moreno, M. (2026). *Overrun: A Resident's Report on a City
-> Past Its Limits.* Civic Darwinism, Vol. I.
+> Past Its Limits.* Civic Darwinism, Vol. I. [https://doi.org/10.5281/zenodo.19533278](https://doi.org/10.5281/zenodo.19533278) · 
 > <https://urbe-ten.vercel.app/>
 
 ---
