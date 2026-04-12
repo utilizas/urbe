@@ -1,6 +1,5 @@
 cff-version: 1.2.0
-title: >-
-  Overrun: A Resident's Report on a City Past Its Limits
+title: "Overrun: A Resident's Report on a City Past Its Limits"
 message: >-
   If you cite this work, please use the metadata below.
 type: dataset
@@ -9,13 +8,19 @@ authors:
     family-names: Moreno
 license: CC-BY-NC-SA-4.0
 date-released: '2026-04-11'
-url: https://github.com/overrun
+repository-code: https://github.com/utilizas/urbe
+url: https://urbe-ten.vercel.app/
 keywords:
   - urban studies
-  - tourism gentrification
+  - applied epistemology
+  - overtourism
+  - gentrification
+  - urban real‑estate speculation
   - housing
   - civic life
+  - university life
   - Mediterranean cities
+  - Granada
 abstract: >-
   Civic Darwinism, Vol. I. A hybrid analytical-satirical
   essay examining urban habitability degradation through
