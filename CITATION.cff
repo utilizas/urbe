@@ -8,6 +8,10 @@ authors:
     family-names: Moreno
 license: CC-BY-NC-SA-4.0
 date-released: '2026-04-11'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.19533278
+    description: Zenodo DOI for the published volume
 repository-code: https://github.com/utilizas/urbe
 url: https://urbe-ten.vercel.app/
 keywords:
