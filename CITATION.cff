@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: >-
+  Overrun: A Resident's Report on a City Past Its Limits
+message: >-
+  If you cite this work, please use the metadata below.
+type: dataset
+authors:
+  - given-names: Miguel
+    family-names: Moreno
+license: CC-BY-NC-SA-4.0
+date-released: '2026-04-11'
+url: https://github.com/overrun
+keywords:
+  - urban studies
+  - tourism gentrification
+  - housing
+  - civic life
+  - Mediterranean cities
+abstract: >-
+  Civic Darwinism, Vol. I. A hybrid analytical-satirical
+  essay examining urban habitability degradation through
+  five civic perspectives — residence, commuting, leisure,
+  public space, and education — in a Mediterranean city
+  reconstituted as a platform of value extraction.
