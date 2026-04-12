@@ -1,11 +1,11 @@
 # Overrun
 
-**A Resident's Report on a City Past Its Limits**  
+## A Resident's Report on a City Past Its Limits**  
 *Civic Darwinism, Volume I*
 
-[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-rust.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-8b3a2a.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![Quarto](https://img.shields.io/badge/built%20with-Quarto-blue)](https://quarto.org/)
-<!-- DOI badge to be added after first Zenodo release -->
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19533278.svg)](https://doi.org/10.5281/zenodo.19533278)
 
 A hybrid analytical-satirical essay examining urban habitability
 degradation through five civic perspectives — residence, commuting,
